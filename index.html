@@ -1,0 +1,2832 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Installed Solutions — Instalações Elétricas e Climatização</title>
+  <meta name="description" content="Installed Solutions — especialista em instalações e manutenções elétricas, climatização e PMOC para empresas na região metropolitana de Porto Alegre. Qualidade, segurança e atendimento 24h.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F7941D">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Installed Solutions — Instalações Elétricas e Climatização">
+  <meta property="og:description" content="Especialista em instalações e manutenções elétricas, climatização e PMOC para empresas na região metropolitana de Porto Alegre.">
+  <meta property="og:image"       content="images/logo.png">
+  <meta property="og:url"         content="https://www.installedsolutions.net">
+  <meta property="og:locale"      content="pt_BR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Installed Solutions">
+  <meta name="twitter:description" content="Instalações elétricas, climatização e PMOC. Elevando qualidade a outro nível.">
+  <meta name="twitter:image"       content="images/logo.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="apple-touch-icon"      href="images/logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Barlow:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- JSON-LD — Dados estruturados -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Installed Solutions",
+    "description": "Especialistas em instalações elétricas, climatização e PMOC para empresas na região metropolitana de Porto Alegre. Qualidade, segurança e atendimento 24h.",
+    "telephone": "+5551992363816",
+    "email": "contato@installedsolutions.net",
+    "url": "https://www.installedsolutions.net",
+    "logo": "https://www.installedsolutions.net/images/logo.png",
+    "image": "https://www.installedsolutions.net/images/logo.png",
+    "priceRange": "$$",
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "08:00",
+      "closes": "17:30"
+    }],
+    "areaServed": [
+      {"@type": "City", "name": "Porto Alegre"},
+      {"@type": "City", "name": "Canoas"},
+      {"@type": "City", "name": "São Leopoldo"},
+      {"@type": "City", "name": "Novo Hamburgo"},
+      {"@type": "City", "name": "Gravataí"},
+      {"@type": "City", "name": "Cachoeirinha"},
+      {"@type": "City", "name": "Sapucaia do Sul"}
+    ],
+    "sameAs": [
+      "https://www.instagram.com/installedsolutions_/",
+      "https://www.instagram.com/gustavo_installed/",
+      "https://www.facebook.com/share/18crWLTvgi/"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços Técnicos",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Instalações Elétricas"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Manutenções Elétricas"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Instalação de Ar-Condicionado"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Manutenção de Climatização"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "PMOC"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automação Industrial"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Laudos Técnicos"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Projetos Técnicos"}}
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ══════════════════════════════════
+       VARIÁVEIS
+    ══════════════════════════════════ */
+    :root {
+      --marrom:      #6B3A1F;
+      --marrom-v:    #7D4526;
+      --marrom-esc:  #3D1F0D;
+      --marrom-soft: #8B5230;
+      --laranja:     #F7941D;
+      --laranja-v:   #FFB347;
+      --laranja-esc: #D47800;
+      --preto:       #0A0A0A;
+      --preto-soft:  #111111;
+      --cinza-esc:   #1A1A1A;
+      --cinza-med:   #2A2A2A;
+      --cinza-400:   #666666;
+      --cinza-300:   #999999;
+      --cinza-200:   #CCCCCC;
+      --cinza-100:   #E8E8E8;
+      --cinza-50:    #F5F5F5;
+      --branco:      #FFFFFF;
+      --ff-titulo:   'Barlow Condensed', sans-serif;
+      --ff-corpo:    'Inter', sans-serif;
+      --ff-barlow:   'Barlow', sans-serif;
+      --tr:          0.3s ease;
+      --radius:      10px;
+      --header-h:    80px;
+    }
+
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--ff-corpo);
+      background: var(--branco);
+      color: var(--preto);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    section { padding: 96px 0; }
+
+    /* ══════════════════════════════════
+       COMPONENTES GLOBAIS
+    ══════════════════════════════════ */
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--ff-titulo);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--laranja);
+      margin-bottom: 16px;
+    }
+    .section-tag::before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: var(--laranja);
+      flex-shrink: 0;
+      transition: width 0.55s ease;
+    }
+    .section-tag.visible-line::before { width: 28px; }
+    .section-tag.dark { color: var(--cinza-300); }
+    .section-tag.dark::before { background: var(--laranja); }
+
+    .section-title {
+      font-family: var(--ff-titulo);
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: 1px;
+      line-height: 1.05;
+      color: var(--preto);
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .section-title.white { color: var(--branco); }
+    .section-title span  { color: var(--laranja); }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--cinza-400);
+      max-width: 580px;
+      line-height: 1.8;
+      margin-bottom: 52px;
+    }
+    .section-desc.white { color: rgba(255,255,255,0.5); }
+
+    /* ── FAIXA DIAGONAL (motivo da logo) ── */
+    .stripe-bar {
+      height: 6px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--laranja) 0, var(--laranja) 10px,
+        var(--laranja-esc) 10px, var(--laranja-esc) 20px
+      );
+    }
+
+    /* ── BOTÕES ── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--ff-titulo);
+      font-size: 0.92rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      border-radius: var(--radius);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all var(--tr);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-laranja {
+      background: var(--laranja);
+      color: var(--preto);
+      border-color: var(--laranja);
+    }
+    .btn-laranja:hover {
+      background: var(--laranja-v);
+      border-color: var(--laranja-v);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(247,148,29,0.4);
+    }
+    .btn-marrom {
+      background: var(--marrom);
+      color: var(--branco);
+      border-color: var(--marrom);
+    }
+    .btn-marrom:hover {
+      background: var(--marrom-v);
+      border-color: var(--marrom-v);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(107,58,31,0.4);
+    }
+    .btn-outline-white {
+      background: rgba(255,255,255,0.08);
+      color: var(--branco);
+      border-color: rgba(255,255,255,0.45);
+    }
+    .btn-outline-white:hover {
+      background: var(--branco);
+      color: var(--preto);
+      border-color: var(--branco);
+      transform: translateY(-2px);
+    }
+    .btn-outline-marrom {
+      background: transparent;
+      color: var(--marrom);
+      border-color: rgba(107,58,31,0.35);
+    }
+    .btn-outline-marrom:hover {
+      background: var(--marrom);
+      color: var(--branco);
+      border-color: var(--marrom);
+      transform: translateY(-2px);
+    }
+
+    /* Ripple */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: rippleAnim 0.55s linear;
+      background: rgba(255,255,255,0.25);
+      pointer-events: none;
+    }
+    @keyframes rippleAnim { to { transform: scale(4); opacity: 0; } }
+
+    /* ══════════════════════════════════
+       HEADER
+    ══════════════════════════════════ */
+    #header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      height: var(--header-h);
+      background: rgba(10,10,10,0.97);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 3px solid var(--laranja);
+      transition: box-shadow var(--tr);
+    }
+    #header.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.6); }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .logo-wrap img {
+      height: 54px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+    }
+    .nav-links a {
+      font-family: var(--ff-titulo);
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      transition: color var(--tr);
+    }
+    .nav-links a:hover { color: var(--branco); }
+
+    .nav-cta {
+      background: var(--laranja) !important;
+      color: var(--preto) !important;
+      font-family: var(--ff-titulo);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 0.52rem 1.4rem;
+      border-radius: 6px;
+      border: 2px solid var(--laranja);
+      transition: all var(--tr);
+    }
+    .nav-cta:hover {
+      background: var(--laranja-v) !important;
+      border-color: var(--laranja-v) !important;
+      transform: translateY(-1px);
+    }
+
+    /* ── HAMBURGER ── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px; height: 2px;
+      background: var(--branco);
+      border-radius: 2px;
+      transition: all var(--tr);
+    }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+    /* ── NAV MOBILE ── */
+    #navMenu {
+      position: fixed;
+      top: var(--header-h);
+      left: 0; right: 0;
+      background: rgba(10,10,10,0.98);
+      backdrop-filter: blur(16px);
+      z-index: 999;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.3s ease;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    #navMenu.open { max-height: 480px; padding: 20px 0 28px; }
+    #navMenu a {
+      display: block;
+      font-family: var(--ff-titulo);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      padding: 14px 24px;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      transition: color var(--tr), background var(--tr);
+    }
+    #navMenu a:hover { color: var(--laranja); background: rgba(247,148,29,0.06); }
+    #navMenu .nav-cta {
+      display: block;
+      margin: 16px 24px 0;
+      text-align: center;
+      border-radius: 6px;
+      padding: 13px 24px !important;
+      border-bottom: none !important;
+    }
+
+    /* ══════════════════════════════════
+       HERO
+    ══════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      padding-top: var(--header-h);
+      display: flex;
+      align-items: center;
+      background-color: var(--preto);
+      background-image:
+        linear-gradient(135deg, rgba(10,10,10,0.96) 0%, rgba(20,10,0,0.85) 60%, rgba(30,15,0,0.92) 100%),
+        url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent 0, transparent 40px,
+        rgba(247,148,29,0.03) 40px, rgba(247,148,29,0.03) 80px
+      );
+      pointer-events: none;
+    }
+    #hero::after {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 5px;
+      background: linear-gradient(180deg, var(--laranja-v), var(--laranja-esc));
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 72px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--ff-titulo);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--laranja);
+      background: rgba(247,148,29,0.12);
+      border: 1px solid rgba(247,148,29,0.4);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      animation: slideDown 0.7s ease 0.3s both, tagGlow 2.5s ease 1.5s infinite;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-14px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    .hero-text h1 {
+      font-family: var(--ff-titulo);
+      font-size: clamp(2.8rem, 5.5vw, 5rem);
+      font-weight: 800;
+      line-height: 0.92;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--branco);
+      margin-bottom: 8px;
+      animation: revealH1 0.9s cubic-bezier(0.22,1,0.36,1) 0.5s both;
+    }
+    .hero-text h1 span { color: var(--laranja); }
+    @keyframes revealH1 {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    .hero-sub {
+      font-family: var(--ff-titulo);
+      font-size: clamp(1rem, 2vw, 1.35rem);
+      font-weight: 400;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.32);
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .hero-slogan {
+      font-family: var(--ff-titulo);
+      font-size: clamp(1.1rem, 2.2vw, 1.55rem);
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      padding-left: 14px;
+      border-left: 3px solid var(--laranja);
+      min-height: 2em;
+    }
+    .typewriter-cursor::after {
+      content: '|';
+      color: var(--laranja);
+      animation: cursorBlink 0.85s step-end infinite;
+      margin-left: 1px;
+    }
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0; }
+    }
+
+    .hero-desc {
+      font-size: 1rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.8;
+      max-width: 500px;
+      margin-bottom: 44px;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 52px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-stat strong {
+      display: block;
+      font-family: var(--ff-titulo);
+      font-size: 2rem;
+      color: var(--laranja);
+      line-height: 1;
+    }
+    .hero-stat span {
+      font-family: var(--ff-titulo);
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* visual lado direito */
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      width: 380px; height: 380px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(247,148,29,0.15) 0%, transparent 70%);
+    }
+    .hero-logo-big {
+      width: 100%;
+      max-width: 380px;
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 0 40px rgba(247,148,29,0.4));
+      animation: floatLogo 6s ease-in-out infinite;
+    }
+    @keyframes floatLogo {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-14px); }
+    }
+
+    .hero-stripe {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 6px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--laranja) 0, var(--laranja) 10px,
+        var(--laranja-esc) 10px, var(--laranja-esc) 20px
+      );
+    }
+
+    /* ══════════════════════════════════
+       MARQUEE
+    ══════════════════════════════════ */
+    .marquee-strip {
+      background: var(--laranja);
+      padding: 13px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-track {
+      display: inline-flex;
+      animation: marqueeScroll 32s linear infinite;
+    }
+    .marquee-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--ff-titulo);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--preto);
+      padding: 0 32px;
+    }
+    .marquee-item i { font-size: 0.55rem; opacity: 0.6; }
+    @keyframes marqueeScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .marquee-strip:hover .marquee-track { animation-play-state: paused; }
+
+    /* ══════════════════════════════════
+       SOBRE
+    ══════════════════════════════════ */
+    #sobre { background: var(--cinza-50); }
+
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .sobre-visual { position: relative; }
+    .sobre-img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .sobre-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(15%);
+      transition: transform 0.6s ease, filter 0.4s ease;
+    }
+    .sobre-visual:hover .sobre-img img { transform: scale(1.04); filter: grayscale(0%); }
+    .sobre-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(247,148,29,0.12) 0%, transparent 60%);
+      border-radius: 14px;
+      pointer-events: none;
+    }
+    .sobre-badge {
+      position: absolute;
+      bottom: -20px; right: -20px;
+      background: var(--laranja);
+      width: 110px; height: 110px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 4px solid var(--cinza-50);
+      box-shadow: 0 8px 32px rgba(247,148,29,0.4);
+    }
+    .sobre-badge strong {
+      font-family: var(--ff-titulo);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--preto);
+      line-height: 1;
+    }
+    .sobre-badge span {
+      font-family: var(--ff-titulo);
+      font-size: 0.58rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.7);
+    }
+
+    .sobre-list {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      margin-top: 28px;
+    }
+    .sobre-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 0.93rem;
+      color: #555;
+      line-height: 1.55;
+    }
+    .sobre-item-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(247,148,29,0.1);
+      border: 1px solid rgba(247,148,29,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--laranja);
+      font-size: 0.82rem;
+      flex-shrink: 0;
+    }
+    .sobre-item strong { font-weight: 600; color: var(--preto); }
+    .sobre-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 36px; }
+
+    /* ══════════════════════════════════
+       SERVIÇOS
+    ══════════════════════════════════ */
+    #servicos { background: var(--branco); }
+
+    .servicos-intro { margin-bottom: 56px; text-align: center; }
+    .servicos-intro .section-tag { justify-content: center; }
+    .servicos-intro .section-desc { margin: 0 auto 0; }
+
+    .servicos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .servico-card {
+      border: 1px solid var(--cinza-100);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: border-color var(--tr), box-shadow var(--tr), transform var(--tr);
+    }
+    .servico-card:hover {
+      border-color: var(--laranja);
+      box-shadow: 0 8px 32px rgba(247,148,29,0.12);
+      transform: translateY(-4px);
+    }
+    .servico-header {
+      background: var(--marrom-esc);
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+    .servico-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--laranja) 0, var(--laranja) 6px,
+        transparent 6px, transparent 12px
+      );
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .servico-card:hover .servico-header::after { transform: scaleX(1); }
+    .servico-header i {
+      font-size: 1.45rem;
+      color: var(--laranja);
+      flex-shrink: 0;
+    }
+    .servico-header h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--branco);
+      line-height: 1.25;
+    }
+    .servico-body {
+      padding: 18px 24px 24px;
+    }
+    .servico-body p {
+      font-size: 0.87rem;
+      color: var(--cinza-400);
+      line-height: 1.75;
+    }
+
+    /* ══════════════════════════════════
+       MVV
+    ══════════════════════════════════ */
+    #mvv {
+      background: var(--marrom-esc);
+      background-image:
+        linear-gradient(135deg, rgba(30,10,0,0.96) 0%, rgba(61,31,13,0.9) 100%),
+        url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+      overflow: hidden;
+    }
+    #mvv::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent 0, transparent 40px,
+        rgba(247,148,29,0.03) 40px, rgba(247,148,29,0.03) 80px
+      );
+      pointer-events: none;
+    }
+    .mvv-header { text-align: center; margin-bottom: 60px; position: relative; z-index: 1; }
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+      position: relative;
+      z-index: 1;
+    }
+    .mvv-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.07);
+      padding: 48px 36px;
+      transition: background var(--tr), border-color var(--tr);
+    }
+    .mvv-card:hover {
+      background: rgba(247,148,29,0.08);
+      border-color: rgba(247,148,29,0.3);
+    }
+    .mvv-icon {
+      width: 56px; height: 56px;
+      background: var(--laranja);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+      color: var(--preto);
+      margin-bottom: 24px;
+    }
+    .mvv-card h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--branco);
+      margin-bottom: 14px;
+    }
+    .mvv-card p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.82;
+    }
+    .mvv-valores-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .mvv-valor-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 0.86rem;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.5;
+    }
+    .mvv-valor-item i { color: var(--laranja); font-size: 0.6rem; margin-top: 5px; flex-shrink: 0; }
+
+    /* ══════════════════════════════════
+       DIFERENCIAIS
+    ══════════════════════════════════ */
+    #diferenciais { background: var(--cinza-50); }
+
+    .dif-intro { text-align: center; margin-bottom: 56px; }
+    .dif-intro .section-tag { justify-content: center; }
+    .dif-intro .section-desc { margin: 0 auto 0; }
+
+    .dif-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .dif-card {
+      background: var(--branco);
+      border: 1px solid var(--cinza-100);
+      border-radius: 14px;
+      padding: 36px 28px;
+      transition: border-color var(--tr), box-shadow var(--tr), transform var(--tr);
+    }
+    .dif-card:hover {
+      border-color: var(--laranja);
+      box-shadow: 0 8px 28px rgba(247,148,29,0.1);
+      transform: translateY(-4px);
+    }
+    .dif-icon {
+      width: 52px; height: 52px;
+      background: rgba(247,148,29,0.1);
+      border: 1px solid rgba(247,148,29,0.25);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.3rem;
+      color: var(--laranja);
+      margin-bottom: 20px;
+    }
+    .dif-card h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.15rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--marrom-esc);
+      margin-bottom: 10px;
+    }
+    .dif-card p {
+      font-size: 0.87rem;
+      color: var(--cinza-400);
+      line-height: 1.75;
+    }
+
+    /* ══════════════════════════════════
+       ÁREA DE ATUAÇÃO
+    ══════════════════════════════════ */
+    #atuacao {
+      background: var(--marrom-esc);
+      position: relative;
+      overflow: hidden;
+    }
+    #atuacao::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent 0, transparent 40px,
+        rgba(247,148,29,0.04) 40px, rgba(247,148,29,0.04) 80px
+      );
+      pointer-events: none;
+    }
+    .atuacao-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+    .atuacao-text .section-tag { color: var(--laranja); }
+    .atuacao-text .section-tag::before { background: var(--laranja); }
+    .atuacao-text h2 { color: var(--branco); margin-bottom: 20px; }
+    .atuacao-text p {
+      font-size: 0.96rem;
+      color: rgba(255,255,255,0.52);
+      line-height: 1.82;
+      margin-bottom: 32px;
+    }
+    .atuacao-destaques {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .atuacao-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--ff-titulo);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+    .atuacao-item i { color: var(--laranja); font-size: 0.7rem; }
+
+    .atuacao-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .atuacao-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 48px 40px;
+      text-align: center;
+      width: 100%;
+    }
+    .atuacao-card i {
+      font-size: 4rem;
+      color: var(--laranja);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .atuacao-card h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--branco);
+      margin-bottom: 10px;
+    }
+    .atuacao-card p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.42);
+      line-height: 1.7;
+    }
+    .atuacao-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--laranja);
+      color: var(--preto);
+      font-family: var(--ff-titulo);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-top: 18px;
+    }
+
+    /* ══════════════════════════════════
+       CONTATO
+    ══════════════════════════════════ */
+    #contato { background: var(--branco); }
+
+    .contato-intro { text-align: center; margin-bottom: 56px; }
+    .contato-intro .section-tag { justify-content: center; }
+    .contato-intro .section-desc { margin: 0 auto 0; }
+
+    .contato-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .contato-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .contato-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 20px;
+      border: 1px solid var(--cinza-100);
+      border-radius: 12px;
+      transition: border-color var(--tr), box-shadow var(--tr);
+      text-decoration: none;
+      color: inherit;
+    }
+    .contato-card:hover {
+      border-color: var(--laranja);
+      box-shadow: 0 4px 18px rgba(247,148,29,0.1);
+    }
+    .contato-card-icon {
+      width: 48px; height: 48px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+      color: var(--branco);
+    }
+    .icon-wa  { background: #25D366; }
+    .icon-mail { background: var(--marrom); }
+    .icon-ig   { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+    .icon-fb   { background: #1877F2; }
+    .contato-card-txt strong {
+      display: block;
+      font-family: var(--ff-titulo);
+      font-size: 0.68rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cinza-300);
+      margin-bottom: 2px;
+    }
+    .contato-card-txt span,
+    .contato-card-txt a {
+      font-size: 0.92rem;
+      color: var(--preto);
+      transition: color var(--tr);
+    }
+    .contato-card:hover .contato-card-txt a { color: var(--laranja); }
+
+    .horario-box {
+      background: var(--cinza-50);
+      border: 1px solid var(--cinza-100);
+      border-left: 4px solid var(--laranja);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 14px;
+    }
+    .horario-box h3 {
+      font-family: var(--ff-titulo);
+      font-size: 0.75rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cinza-300);
+      margin-bottom: 12px;
+    }
+    .horario-box p {
+      font-size: 0.92rem;
+      color: var(--preto);
+      line-height: 1.8;
+    }
+    .horario-box p strong { color: var(--laranja); font-weight: 600; }
+    .horario-emergencia {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(247,148,29,0.1);
+      border: 1px solid rgba(247,148,29,0.3);
+      color: var(--laranja-esc);
+      font-family: var(--ff-titulo);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-top: 10px;
+    }
+
+    .contato-cta-box {
+      background: var(--marrom-esc);
+      border-radius: 16px;
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .contato-cta-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        transparent 0, transparent 30px,
+        rgba(247,148,29,0.05) 30px, rgba(247,148,29,0.05) 60px
+      );
+    }
+    .contato-cta-box > * { position: relative; z-index: 1; }
+    .contato-cta-box i { font-size: 3rem; color: var(--laranja); display: block; margin-bottom: 20px; }
+    .contato-cta-box h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--branco);
+      margin-bottom: 12px;
+    }
+    .contato-cta-box p {
+      font-size: 0.92rem;
+      color: rgba(255,255,255,0.48);
+      line-height: 1.75;
+      margin-bottom: 32px;
+    }
+
+    /* ══════════════════════════════════
+       FOOTER
+    ══════════════════════════════════ */
+    #footer {
+      background: var(--preto);
+      border-top: 6px solid transparent;
+      border-image: repeating-linear-gradient(
+        -45deg,
+        var(--laranja) 0, var(--laranja) 10px,
+        var(--laranja-esc) 10px, var(--laranja-esc) 20px
+      ) 6;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 48px 0 36px;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-logo img {
+      height: 72px;
+      width: auto;
+    }
+    .footer-info {
+      font-family: var(--ff-titulo);
+      font-size: 0.82rem;
+      letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      line-height: 1.9;
+    }
+    .footer-info strong { color: rgba(255,255,255,0.55); }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-social a {
+      width: 40px; height: 40px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.12);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.45);
+      font-size: 0.9rem;
+      transition: all var(--tr);
+    }
+    .footer-social a:hover {
+      background: var(--laranja);
+      border-color: var(--laranja);
+      color: var(--preto);
+      transform: translateY(-2px);
+    }
+    .footer-copy {
+      font-family: var(--ff-titulo);
+      font-size: 0.7rem;
+      text-align: center;
+      color: rgba(255,255,255,0.18);
+      padding-bottom: 28px;
+      letter-spacing: 0.5px;
+    }
+
+    /* ══════════════════════════════════
+       FLUTUANTES
+    ══════════════════════════════════ */
+    .wa-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      z-index: 900;
+    }
+    .wa-float a {
+      width: 58px; height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      color: var(--branco);
+      font-size: 1.55rem;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 18px rgba(37,211,102,0.38);
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+    .wa-float a:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 26px rgba(37,211,102,0.55);
+    }
+
+    .scroll-top {
+      position: fixed;
+      bottom: 28px; left: 28px;
+      z-index: 900;
+      width: 44px; height: 44px;
+      border-radius: 8px;
+      background: var(--laranja);
+      color: var(--preto);
+      font-size: 0.88rem;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      opacity: 0; pointer-events: none;
+      transition: opacity var(--tr), transform var(--tr);
+      border: none;
+    }
+    .scroll-top.show { opacity: 1; pointer-events: all; }
+    .scroll-top:hover { transform: translateY(-2px); }
+
+    /* ══════════════════════════════════
+       ANIMAÇÕES
+    ══════════════════════════════════ */
+    .fade-up    { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-left  { opacity: 0; transform: translateX(-28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-right { opacity: 0; transform: translateX(28px);  transition: opacity 0.7s ease, transform 0.7s ease; }
+    .fade-scale { opacity: 0; transform: scale(0.94);       transition: opacity 0.65s ease, transform 0.65s ease; }
+    .fade-up.visible, .fade-left.visible, .fade-right.visible, .fade-scale.visible {
+      opacity: 1; transform: none;
+    }
+    .d1 { transition-delay: 0.05s; }
+    .d2 { transition-delay: 0.12s; }
+    .d3 { transition-delay: 0.20s; }
+    .d4 { transition-delay: 0.28s; }
+    .d5 { transition-delay: 0.36s; }
+    .d6 { transition-delay: 0.44s; }
+
+    #scroll-progress {
+      position: fixed; top: 0; left: 0;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--marrom), var(--laranja));
+      z-index: 2000;
+      transition: width 0.1s linear;
+    }
+
+    /* ── SHIMMER LARANJA H1 ── */
+    .shimmer-laranja {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--laranja-esc) 0%, var(--laranja-v) 35%, #ffe0a0 50%, var(--laranja-v) 65%, var(--laranja-esc) 100%);
+      background-size: 300% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmerLaranja 4s linear 2s infinite;
+    }
+    @keyframes shimmerLaranja {
+      0%   { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+
+    /* ── PARTÍCULAS HERO ── */
+    .hero-particles { position: absolute; inset: 0; pointer-events: none; z-index: 1; overflow: hidden; }
+    .hero-particle {
+      position: absolute;
+      border-radius: 50%;
+      background: var(--laranja);
+      opacity: 0;
+      animation: particleFade var(--dur, 5s) ease-in-out var(--delay, 0s) infinite;
+    }
+    @keyframes particleFade {
+      0%   { opacity: 0; transform: translateY(0) scale(0.5); }
+      25%  { opacity: 0.45; }
+      75%  { opacity: 0.12; }
+      100% { opacity: 0; transform: translateY(-90px) scale(0); }
+    }
+
+    /* ── HERO TAG GLOW PULSANTE ── */
+    @keyframes tagGlow {
+      0%, 100% { border-color: rgba(247,148,29,0.4); box-shadow: 0 0 0 0 rgba(247,148,29,0); }
+      50%       { border-color: rgba(247,148,29,0.85); box-shadow: 0 0 16px 4px rgba(247,148,29,0.2); }
+    }
+
+    /* ── BOTÃO LARANJA — SWEEP DE LUZ ── */
+    .btn-laranja::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -75%;
+      width: 50%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+      transform: skewX(-15deg);
+      pointer-events: none;
+    }
+    .btn-laranja:hover::before { animation: btnSweep 0.48s ease forwards; }
+    @keyframes btnSweep {
+      0%   { left: -75%; }
+      100% { left: 150%; }
+    }
+
+    /* ── DIF-ICON GLOW + BOUNCE ── */
+    .dif-card:hover .dif-icon {
+      background: rgba(247,148,29,0.22);
+      border-color: rgba(247,148,29,0.6);
+      box-shadow: 0 0 22px rgba(247,148,29,0.35);
+      transition: all 0.3s ease;
+    }
+    .dif-card:hover .dif-icon i { animation: iconBounce 0.4s ease; }
+    @keyframes iconBounce {
+      0%   { transform: scale(1); }
+      40%  { transform: scale(1.25); }
+      100% { transform: scale(1); }
+    }
+
+    /* ── MVV ICON GLOW + ROTATE ── */
+    .mvv-icon { transition: all 0.35s ease; }
+    .mvv-card:hover .mvv-icon {
+      box-shadow: 0 0 24px rgba(247,148,29,0.55);
+      transform: scale(1.1) rotate(6deg);
+    }
+
+    /* ── ATUAÇÃO — CIDADES HOVER ── */
+    .atuacao-item { transition: color 0.3s ease, transform 0.3s ease; }
+    .atuacao-item:hover { color: rgba(255,255,255,0.9); transform: translateX(6px); }
+    .atuacao-item:hover i { color: var(--laranja-v); }
+
+    /* ── SOBRE-ITEM ICON HOVER ── */
+    .sobre-item-icon { transition: all 0.3s ease; }
+    .sobre-item:hover .sobre-item-icon {
+      background: rgba(247,148,29,0.22);
+      border-color: rgba(247,148,29,0.55);
+      box-shadow: 0 0 14px rgba(247,148,29,0.3);
+      transform: scale(1.1);
+    }
+
+    /* ── CONTATO CARD ICON SCALE ── */
+    .contato-card-icon { transition: transform 0.3s ease; }
+    .contato-card:hover .contato-card-icon { transform: scale(1.12) rotate(-4deg); }
+
+    /* ══════════════════════════════════
+       FAQ
+    ══════════════════════════════════ */
+    #faq { background: var(--cinza-50); }
+
+    .faq-intro { text-align: center; margin-bottom: 52px; }
+    .faq-intro .section-tag { justify-content: center; }
+    .faq-intro .section-desc { margin: 0 auto; }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--cinza-100);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .faq-item.active {
+      border-color: rgba(247,148,29,0.45);
+      box-shadow: 0 4px 20px rgba(247,148,29,0.08);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      width: 100%;
+      padding: 20px 24px;
+      background: var(--branco);
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--ff-titulo);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: var(--marrom-esc);
+      transition: color 0.3s ease, background 0.3s ease;
+    }
+    .faq-item.active .faq-question { color: var(--laranja-esc); background: rgba(247,148,29,0.03); }
+
+    .faq-icon {
+      width: 30px; height: 30px;
+      border-radius: 8px;
+      background: rgba(247,148,29,0.1);
+      border: 1px solid rgba(247,148,29,0.25);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--laranja);
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      transition: transform 0.38s ease, background 0.3s ease, border-color 0.3s ease;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+      background: var(--laranja);
+      border-color: var(--laranja);
+      color: var(--preto);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.42s ease;
+      background: var(--branco);
+    }
+    .faq-item.active .faq-answer { max-height: 400px; }
+    .faq-answer-inner {
+      padding: 4px 24px 22px;
+      font-size: 0.92rem;
+      color: var(--cinza-400);
+      line-height: 1.85;
+      border-top: 1px solid var(--cinza-100);
+    }
+
+    /* ══════════════════════════════════
+       FORMULÁRIO DE CONTATO
+    ══════════════════════════════════ */
+    .contato-form {
+      background: var(--branco);
+      border: 1px solid var(--cinza-100);
+      border-radius: 16px;
+      padding: 40px 36px;
+    }
+    .contato-form-header {
+      margin-bottom: 28px;
+    }
+    .contato-form-header h3 {
+      font-family: var(--ff-titulo);
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--marrom-esc);
+      margin-bottom: 6px;
+    }
+    .contato-form-header p {
+      font-size: 0.88rem;
+      color: var(--cinza-400);
+      line-height: 1.6;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+    .form-group:last-of-type { margin-bottom: 0; }
+
+    .form-label {
+      font-family: var(--ff-titulo);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cinza-300);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 11px 14px;
+      border: 1px solid var(--cinza-100);
+      border-radius: 8px;
+      font-family: var(--ff-corpo);
+      font-size: 0.9rem;
+      color: var(--preto);
+      background: var(--cinza-50);
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    }
+    .form-input::placeholder, .form-textarea::placeholder { color: var(--cinza-300); }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--laranja);
+      box-shadow: 0 0 0 3px rgba(247,148,29,0.12);
+      background: var(--branco);
+    }
+    .form-select { cursor: pointer; }
+    .form-textarea { resize: vertical; min-height: 96px; }
+
+    .form-submit-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+    .form-submit-row .btn { flex: 1; justify-content: center; }
+    .form-privacy {
+      font-size: 0.72rem;
+      color: var(--cinza-300);
+      line-height: 1.5;
+      width: 100%;
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px 20px;
+    }
+    .form-success i { font-size: 2.8rem; color: #25D366; margin-bottom: 14px; display: block; }
+    .form-success h4 {
+      font-family: var(--ff-titulo); font-size: 1.3rem; font-weight: 800;
+      text-transform: uppercase; color: var(--marrom-esc); margin-bottom: 8px;
+    }
+    .form-success p { font-size: 0.9rem; color: var(--cinza-400); }
+
+    /* ══════════════════════════════════
+       GALERIA
+    ══════════════════════════════════ */
+    #galeria { background: var(--cinza-50); }
+
+    .galeria-intro { text-align: center; margin-bottom: 52px; }
+    .galeria-intro .section-tag { justify-content: center; }
+    .galeria-intro .section-desc { margin: 0 auto; }
+
+    .galeria-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+    .galeria-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+      cursor: pointer;
+    }
+    .galeria-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .galeria-item:hover img { transform: scale(1.07); }
+
+    .galeria-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, rgba(30,10,0,0.88) 0%, rgba(30,10,0,0.1) 55%, transparent 100%);
+      display: flex;
+      align-items: flex-end;
+      padding: 14px 12px;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+    .galeria-item:hover .galeria-overlay { opacity: 1; }
+
+    .galeria-overlay span {
+      font-family: var(--ff-titulo);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--branco);
+      border-left: 3px solid var(--laranja);
+      padding-left: 9px;
+      line-height: 1.3;
+    }
+
+    /* ══════════════════════════════════
+       RESPONSIVIDADE
+    ══════════════════════════════════ */
+
+    /* ── 1199px — large tablets / small laptops ── */
+    @media (max-width: 1199px) {
+      .hero-inner    { gap: 48px; }
+      .hero-logo-big { max-width: 300px; }
+      .sobre-grid    { gap: 52px; }
+      .dif-grid      { grid-template-columns: repeat(3, 1fr); }
+      .mvv-card      { padding: 40px 30px; }
+    }
+
+    /* ── 1023px — tablets ── */
+    @media (max-width: 1023px) {
+      :root { --header-h: 72px; }
+      section { padding: 80px 0; }
+
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .logo-wrap img { height: 48px; }
+
+      #mvv { background-attachment: scroll; }
+
+      /* hero */
+      .hero-inner    { grid-template-columns: 1fr; gap: 0; }
+      .hero-visual   { display: none; }
+      .hero-text     { text-align: center; }
+      .hero-tag      { margin-left: auto; margin-right: auto; }
+      .hero-slogan   { border-left: none; border-bottom: 3px solid var(--laranja); padding-left: 0; padding-bottom: 12px; display: inline-block; }
+      .hero-desc     { text-align: center; margin-left: auto; margin-right: auto; max-width: 100%; }
+      .hero-btns     { justify-content: center; }
+      .hero-stats    { justify-content: center; gap: 40px; }
+
+      /* sobre */
+      .sobre-grid    { grid-template-columns: 1fr; }
+      .sobre-visual  { display: none; }
+      .sobre-btns    { justify-content: center; }
+
+      /* serviços / mvv / dif */
+      .servicos-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .mvv-grid      { grid-template-columns: 1fr; gap: 14px; }
+      .mvv-card      { padding: 36px 28px; }
+      .dif-grid      { grid-template-columns: 1fr 1fr; gap: 16px; }
+      .dif-card      { padding: 30px 22px; }
+
+      /* galeria */
+      .galeria-grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+
+      /* atuação */
+      .atuacao-inner  { grid-template-columns: 1fr; gap: 36px; }
+      .atuacao-visual { order: -1; }
+      .atuacao-card   { padding: 36px 28px; }
+
+      /* contato */
+      .contato-grid  { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    /* ── 767px — mobile large ── */
+    @media (max-width: 767px) {
+      :root { --header-h: 68px; }
+      section { padding: 68px 0; }
+      .container { padding: 0 1.25rem; }
+      .logo-wrap img { height: 44px; }
+
+      /* hero */
+      .hero-text h1     { font-size: clamp(2.4rem, 8vw, 3.4rem); }
+      .hero-sub         { font-size: 0.9rem; letter-spacing: 2px; }
+      .hero-slogan      { font-size: 1rem; }
+      .hero-desc        { font-size: 0.93rem; }
+      .hero-stats       { gap: 28px; flex-wrap: wrap; }
+      .hero-stat strong { font-size: 1.65rem; }
+
+      /* tipografia */
+      .section-title { font-size: clamp(1.9rem, 6vw, 2.8rem); }
+      .section-desc  { font-size: 0.95rem; margin-bottom: 40px; }
+
+      /* marquee */
+      .marquee-item { font-size: 0.82rem; letter-spacing: 1.5px; padding: 0 20px; }
+
+      /* sobre */
+      .sobre-badge        { width: 92px; height: 92px; bottom: -14px; right: -14px; }
+      .sobre-badge strong { font-size: 1.35rem; }
+
+      /* serviços */
+      .servicos-grid   { grid-template-columns: 1fr; }
+      .servico-header  { padding: 18px 20px; }
+      .servico-body    { padding: 14px 20px 20px; }
+      .servico-body p  { font-size: 0.86rem; }
+
+      /* mvv */
+      .mvv-grid { gap: 12px; }
+      .mvv-card { padding: 30px 24px; }
+
+      /* galeria */
+      .galeria-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+
+      /* diferenciais */
+      .dif-grid { grid-template-columns: 1fr 1fr; }
+      .dif-card { padding: 26px 20px; }
+      .dif-card h3 { font-size: 1rem; }
+
+      /* atuação */
+      .atuacao-destaques { grid-template-columns: 1fr; gap: 10px; }
+      .atuacao-card      { padding: 32px 24px; }
+      .atuacao-card i    { font-size: 3rem; }
+      .atuacao-card h3   { font-size: 1.5rem; }
+
+      /* contato */
+      .contato-card       { padding: 16px; gap: 14px; }
+      .horario-box        { padding: 18px; }
+      .contato-cta-box    { padding: 36px 24px; }
+      .contato-cta-box i  { font-size: 2.4rem; }
+      .contato-cta-box h3 { font-size: 1.5rem; }
+
+      /* footer */
+      .footer-inner   { flex-direction: column; align-items: center; text-align: center; gap: 20px; }
+      .footer-logo    { margin: 0 auto; }
+      .footer-info    { text-align: center; font-size: 0.78rem; }
+      .footer-social  { justify-content: center; }
+    }
+
+    /* ── 599px — mobile médio ── */
+    @media (max-width: 599px) {
+      :root { --header-h: 64px; }
+      section { padding: 56px 0; }
+      .container { padding: 0 1.1rem; }
+
+      /* hero */
+      .hero-text h1     { font-size: clamp(2rem, 9vw, 2.8rem); }
+      .hero-slogan      { font-size: 0.95rem; letter-spacing: 1.5px; }
+      .hero-desc        { font-size: 0.9rem; }
+      .hero-btns        { flex-direction: column; }
+      .hero-btns .btn   { width: 100%; justify-content: center; }
+      .hero-stats       { gap: 16px; flex-wrap: wrap; padding-top: 28px; margin-top: 36px; }
+      .hero-stat strong { font-size: 1.5rem; }
+
+      /* tipografia */
+      .section-title { font-size: clamp(1.75rem, 7vw, 2.2rem); }
+
+      /* serviços */
+      .servico-header   { padding: 16px 18px; gap: 12px; }
+      .servico-header i { font-size: 1.25rem; }
+      .servico-body     { padding: 12px 18px 18px; }
+
+      /* mvv */
+      .mvv-card { padding: 26px 20px; }
+
+      /* galeria */
+      .galeria-grid { grid-template-columns: repeat(2, 1fr); gap: 7px; }
+
+      /* diferenciais */
+      .dif-grid { grid-template-columns: 1fr; }
+      .dif-card { padding: 22px 18px; }
+
+      /* sobre */
+      .sobre-btns     { flex-direction: column; }
+      .sobre-btns .btn{ width: 100%; justify-content: center; }
+
+      /* atuação */
+      .atuacao-card   { padding: 26px 20px; }
+      .atuacao-card i { font-size: 2.8rem; }
+
+      /* contato / form */
+      .contato-cards  { gap: 10px; }
+      .horario-box    { padding: 16px; }
+      .contato-form   { padding: 28px 22px; }
+      .form-row       { grid-template-columns: 1fr; gap: 0; }
+    }
+
+    /* ── 479px — mobile pequeno ── */
+    @media (max-width: 479px) {
+      :root { --header-h: 60px; }
+      section { padding: 48px 0; }
+      .container { padding: 0 1rem; }
+      .logo-wrap img { height: 38px; }
+
+      /* hero */
+      .hero-text h1     { font-size: clamp(1.9rem, 10vw, 2.5rem); }
+      .hero-sub         { font-size: 0.82rem; }
+      .hero-tag         { font-size: 0.68rem; padding: 5px 12px; }
+      .hero-slogan      { font-size: 0.88rem; }
+      .hero-stats       { flex-direction: column; align-items: center; gap: 12px; }
+
+      /* tipografia */
+      .section-title { font-size: clamp(1.65rem, 8vw, 2rem); }
+      .section-desc  { font-size: 0.88rem; }
+
+      /* marquee */
+      .marquee-item { font-size: 0.76rem; padding: 0 16px; letter-spacing: 1px; }
+
+      /* sobre */
+      .sobre-badge        { width: 78px; height: 78px; }
+      .sobre-badge strong { font-size: 1.2rem; }
+      .sobre-badge span   { font-size: 0.5rem; }
+
+      /* serviços */
+      .servico-header   { padding: 14px 16px; gap: 10px; }
+      .servico-header i { font-size: 1.15rem; }
+      .servico-header h3{ font-size: 0.9rem; }
+      .servico-body     { padding: 12px 16px 16px; }
+      .servico-body p   { font-size: 0.84rem; }
+
+      /* mvv */
+      .mvv-card { padding: 22px 18px; }
+      .mvv-icon { width: 46px; height: 46px; font-size: 1rem; }
+      .mvv-card h3 { font-size: 1.35rem; }
+
+      /* diferenciais */
+      .dif-card { padding: 20px 16px; }
+      .dif-icon { width: 44px; height: 44px; font-size: 1.1rem; }
+      .dif-card h3 { font-size: 0.95rem; }
+
+      /* atuação */
+      .atuacao-card   { padding: 22px 18px; }
+      .atuacao-item   { font-size: 0.78rem; }
+
+      /* contato / form */
+      .contato-card      { gap: 12px; padding: 14px; }
+      .contato-card-icon { width: 42px; height: 42px; font-size: 0.9rem; }
+      .horario-box       { padding: 14px; }
+      .horario-box p     { font-size: 0.88rem; }
+      .contato-form      { padding: 24px 18px; }
+      .faq-question      { font-size: 0.88rem; padding: 16px 18px; }
+      .faq-answer-inner  { padding: 4px 18px 18px; font-size: 0.88rem; }
+
+      /* flutuantes */
+      .wa-float   { bottom: 16px; right: 16px; }
+      .wa-float a { width: 52px; height: 52px; font-size: 1.4rem; }
+      .scroll-top { bottom: 16px; left: 16px; }
+
+      /* geral */
+      .btn { font-size: 0.84rem; padding: 0.82rem 1.6rem; }
+      .footer-logo img { height: 58px; }
+      .footer-copy { font-size: 0.66rem; }
+    }
+
+    /* ── 380px — mobile muito pequeno ── */
+    @media (max-width: 380px) {
+      :root { --header-h: 56px; }
+      section { padding: 40px 0; }
+      .container { padding: 0 0.9rem; }
+      .logo-wrap img { height: 34px; }
+
+      /* hero */
+      .hero-text h1  { font-size: 1.8rem; line-height: 0.95; }
+      .hero-slogan   { font-size: 0.82rem; }
+      .hero-sub      { font-size: 0.78rem; }
+
+      /* tipografia */
+      .section-title { font-size: 1.55rem; }
+      .section-desc  { font-size: 0.85rem; margin-bottom: 28px; }
+
+      /* nav mobile */
+      #navMenu a        { font-size: 0.95rem; padding: 12px 18px; }
+      #navMenu .nav-cta { margin: 12px 18px 0; }
+
+      /* marquee */
+      .marquee-item { font-size: 0.7rem; padding: 0 12px; }
+
+      /* sobre */
+      .sobre-badge { display: none; }
+
+      /* serviços */
+      .servico-header   { padding: 12px 14px; }
+      .servico-header h3{ font-size: 0.85rem; }
+      .servico-body     { padding: 10px 14px 14px; }
+      .servico-body p   { font-size: 0.82rem; }
+
+      /* mvv */
+      .mvv-card { padding: 18px 14px; }
+      .mvv-card h3 { font-size: 1.2rem; }
+      .mvv-card p  { font-size: 0.84rem; }
+
+      /* diferenciais */
+      .dif-card { padding: 18px 14px; }
+      .dif-icon { width: 40px; height: 40px; font-size: 1rem; margin-bottom: 14px; }
+      .dif-card p { font-size: 0.83rem; }
+
+      /* atuação */
+      .atuacao-card   { padding: 20px 16px; }
+      .atuacao-card i { font-size: 2.4rem; }
+      .atuacao-card h3{ font-size: 1.35rem; }
+
+      /* contato / form */
+      .contato-form      { padding: 20px 14px; }
+      .horario-box       { padding: 12px; }
+      .faq-question      { font-size: 0.82rem; padding: 14px 16px; gap: 12px; }
+      .faq-answer-inner  { padding: 4px 16px 16px; font-size: 0.85rem; }
+      .form-submit-row   { flex-direction: column; }
+      .form-submit-row .btn { width: 100%; }
+
+      /* footer */
+      .footer-logo img { height: 50px; }
+
+      /* geral */
+      .btn { font-size: 0.8rem; padding: 0.75rem 1.3rem; }
+    }
+
+    /* ── 320px — telas mínimas ── */
+    @media (max-width: 320px) {
+      :root { --header-h: 52px; }
+      section { padding: 36px 0; }
+      .container { padding: 0 0.85rem; }
+      .logo-wrap img { height: 30px; }
+
+      .hero-text h1  { font-size: 1.65rem; line-height: 1; }
+      .section-title { font-size: 1.4rem; }
+
+      .servico-header   { padding: 10px 12px; }
+      .servico-header h3{ font-size: 0.82rem; }
+      .servico-body     { padding: 8px 12px 12px; }
+      .servico-body p   { font-size: 0.8rem; }
+
+      .mvv-card { padding: 16px 12px; }
+      .dif-card { padding: 16px 12px; }
+
+      .contato-cta-box { padding: 20px 14px; }
+      .marquee-item    { font-size: 0.66rem; padding: 0 10px; }
+
+      .footer-logo img { height: 44px; }
+      .wa-float a { width: 48px; height: 48px; font-size: 1.3rem; }
+      .scroll-top { width: 38px; height: 38px; }
+      .btn { font-size: 0.76rem; padding: 0.7rem 1.1rem; }
+    }
+
+    /* ── landscape mobile ── */
+    @media (max-height: 500px) and (orientation: landscape) {
+      #hero { min-height: auto; padding-top: calc(var(--header-h) + 28px); padding-bottom: 48px; }
+      .hero-visual  { display: none; }
+      .hero-stats   { display: none; }
+      .hero-btns    { flex-direction: row; }
+      .hero-btns .btn { width: auto; }
+      .hero-text    { text-align: left; }
+      .hero-tag     { margin-left: 0; margin-right: 0; }
+      .hero-slogan  { border-left: 3px solid var(--laranja); border-bottom: none; padding-left: 14px; padding-bottom: 0; display: block; }
+      .hero-desc    { text-align: left; }
+      section { padding: 48px 0; }
+    }
+
+    /* ── prefers-reduced-motion ── */
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up, .fade-left, .fade-right, .fade-scale { opacity: 1; transform: none; transition: none; }
+      .marquee-track { animation: none; }
+      .hero-logo-big { animation: none; }
+      .hero-tag, .hero-text h1 { animation: none; }
+      .typewriter-cursor::after { animation: none; }
+      .section-tag.visible-line::before { transition: none; }
+      .shimmer-laranja { animation: none; -webkit-text-fill-color: var(--laranja); background: none; }
+      .hero-particle { animation: none; opacity: 0; }
+      .btn-laranja::before { display: none; }
+      .mvv-icon { transition: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ══════ HEADER ══════ -->
+  <header id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo-wrap" aria-label="Installed Solutions — Início">
+        <img src="images/logo.png" alt="Installed Solutions" loading="eager">
+      </a>
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#galeria">Trabalhos</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contato">Contato</a>
+        <a href="https://wa.me/5551992363816" target="_blank" rel="noopener noreferrer" class="nav-cta">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav id="navMenu" aria-label="Menu mobile">
+    <a href="#sobre">Sobre</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Trabalhos</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contato">Contato</a>
+    <a href="https://wa.me/5551992363816" target="_blank" rel="noopener noreferrer" class="nav-cta">
+      <i class="fa-brands fa-whatsapp"></i> Falar no WhatsApp
+    </a>
+  </nav>
+
+  <!-- ══════ HERO ══════ -->
+  <section id="hero" aria-label="Apresentação">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="hero-tag">
+            <i class="fa-solid fa-bolt"></i>
+            Instalações &amp; Manutenções Técnicas
+          </div>
+          <h1><span class="shimmer-laranja">Installed</span><br>Solutions</h1>
+          <p class="hero-sub">Manutenção &amp; Serviços</p>
+          <p class="hero-slogan typewriter-cursor" id="heroSlogan"></p>
+          <p class="hero-desc">Especialistas em instalações elétricas, climatização e PMOC para empresas. Soluções completas com qualidade, segurança e atendimento próximo na região metropolitana de Porto Alegre.</p>
+          <div class="hero-btns">
+            <a href="https://wa.me/5551992363816?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!" target="_blank" rel="noopener noreferrer" class="btn btn-laranja">
+              <i class="fa-brands fa-whatsapp"></i> Solicitar orçamento
+            </a>
+            <a href="#servicos" class="btn btn-outline-white">
+              <i class="fa-solid fa-wrench"></i> Ver serviços
+            </a>
+          </div>
+          <div class="hero-stats" id="heroStats">
+            <div class="hero-stat">
+              <strong>Desde <span class="counter" data-target="2020" data-suffix="">2020</span></strong>
+              <span>No mercado</span>
+            </div>
+            <div class="hero-stat">
+              <strong><span class="counter" data-target="9" data-suffix="+">0+</span></strong>
+              <span>Serviços especializados</span>
+            </div>
+            <div class="hero-stat">
+              <strong>24h</strong>
+              <span>Plantão de emergência</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <img src="images/logo.png" alt="" class="hero-logo-big" loading="eager">
+        </div>
+      </div>
+    </div>
+    <div class="hero-particles" id="heroParticles" aria-hidden="true"></div>
+    <div class="hero-stripe"></div>
+  </section>
+
+  <!-- ══════ MARQUEE ══════ -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Instalações Elétricas</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Manutenção Elétrica</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Climatização</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> PMOC</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Automação Industrial</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Laudos Técnicos</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Projetos Técnicos</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Atendimento 24h</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Porto Alegre e Região</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Instalações Elétricas</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Manutenção Elétrica</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Climatização</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> PMOC</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Automação Industrial</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Laudos Técnicos</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Projetos Técnicos</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Atendimento 24h</span>
+      <span class="marquee-item"><i class="fa-solid fa-circle"></i> Porto Alegre e Região</span>
+    </div>
+  </div>
+
+  <!-- ══════ SOBRE ══════ -->
+  <section id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual fade-scale" aria-hidden="true">
+          <div class="sobre-img">
+            <img src="images/midia_9.jpg" alt="Quadro de comando elétrico" loading="lazy">
+          </div>
+          <div class="sobre-badge">
+            <strong>2020</strong>
+            <span>Fundação</span>
+          </div>
+        </div>
+
+        <div class="sobre-text fade-right">
+          <span class="section-tag">Nossa história</span>
+          <h2 class="section-title">De onde viemos, <span>onde chegamos</span></h2>
+          <p style="font-size:0.95rem;color:#555;line-height:1.82;margin-bottom:14px;">A Installed Solutions nasceu em um dos períodos mais desafiadores da história recente — durante a pandemia. Em meio às incertezas, a empresa iniciou suas atividades com foco em instalações elétricas e projetos de iluminação, sempre priorizando a qualidade do serviço.</p>
+          <p style="font-size:0.95rem;color:#555;line-height:1.82;">Com dedicação e conhecimento técnico, evoluímos de pequenos projetos para contratos robustos, ampliando nossa atuação e hoje atendendo empresas de diferentes segmentos — incluindo multinacionais — como parceira estratégica em soluções elétricas e de climatização.</p>
+
+          <div class="sobre-list">
+            <div class="sobre-item">
+              <div class="sobre-item-icon"><i class="fa-solid fa-certificate"></i></div>
+              <span><strong>Qualidade certificada</strong> — entregas com padrão técnico e conformidade com normas</span>
+            </div>
+            <div class="sobre-item">
+              <div class="sobre-item-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <span><strong>Segurança em primeiro lugar</strong> — todos os serviços executados com rigor técnico</span>
+            </div>
+            <div class="sobre-item">
+              <div class="sobre-item-icon"><i class="fa-solid fa-building"></i></div>
+              <span><strong>Atendemos multinacionais</strong> — portfólio diversificado do pequeno ao grande porte</span>
+            </div>
+            <div class="sobre-item">
+              <div class="sobre-item-icon"><i class="fa-solid fa-clock"></i></div>
+              <span><strong>Plantão 24h</strong> — disponibilidade total para chamadas de emergência</span>
+            </div>
+          </div>
+
+          <div class="sobre-btns">
+            <a href="https://wa.me/5551992363816?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20a%20Installed%20Solutions!" target="_blank" rel="noopener noreferrer" class="btn btn-laranja">
+              <i class="fa-brands fa-whatsapp"></i> Fale conosco
+            </a>
+            <a href="#servicos" class="btn btn-outline-marrom">
+              <i class="fa-solid fa-arrow-down"></i> Ver serviços
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ SERVIÇOS ══════ -->
+  <section id="servicos">
+    <div class="container">
+      <div class="servicos-intro fade-up">
+        <span class="section-tag">O que fazemos</span>
+        <h2 class="section-title">Nossos <span>serviços</span></h2>
+        <p class="section-desc">Soluções técnicas completas para empresas que precisam de infraestrutura elétrica e sistemas de climatização com segurança e eficiência.</p>
+      </div>
+      <div class="servicos-grid">
+        <div class="servico-card fade-scale d1">
+          <div class="servico-header">
+            <i class="fa-solid fa-bolt"></i>
+            <h3>Instalações elétricas</h3>
+          </div>
+          <div class="servico-body">
+            <p>Execução de projetos elétricos completos para ambientes comerciais, industriais e corporativos, com conformidade às normas técnicas.</p>
+          </div>
+        </div>
+        <div class="servico-card fade-scale d2">
+          <div class="servico-header">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <h3>Manutenções elétricas</h3>
+          </div>
+          <div class="servico-body">
+            <p>Manutenção preventiva e corretiva em sistemas elétricos, garantindo a continuidade operacional e a segurança das instalações.</p>
+          </div>
+        </div>
+        <div class="servico-card fade-scale d3">
+          <div class="servico-header">
+            <i class="fa-solid fa-snowflake"></i>
+            <h3>Instalação de climatização</h3>
+          </div>
+          <div class="servico-body">
+            <p>Instalação de sistemas de ar-condicionado, splits e centrais de climatização para escritórios, indústrias e espaços corporativos.</p>
+          </div>
+        </div>
+        <div class="servico-card fade-scale d4">
+          <div class="servico-header">
+            <i class="fa-solid fa-temperature-half"></i>
+            <h3>Manutenção de climatização</h3>
+          </div>
+          <div class="servico-body">
+            <p>Revisão, higienização e manutenção preventiva e corretiva de sistemas de climatização para máximo desempenho e vida útil.</p>
+          </div>
+        </div>
+        <div class="servico-card fade-scale d5">
+          <div class="servico-header">
+            <i class="fa-solid fa-clipboard-check"></i>
+            <h3>PMOC</h3>
+          </div>
+          <div class="servico-body">
+            <p>Elaboração e execução do Plano de Manutenção, Operação e Controle conforme exigência da ANVISA para ambientes climatizados de uso coletivo.</p>
+          </div>
+        </div>
+        <div class="servico-card fade-scale d6">
+          <div class="servico-header">
+            <i class="fa-solid fa-file-circle-check"></i>
+            <h3>Adequações e regularizações</h3>
+          </div>
+          <div class="servico-body">
+            <p>Adequação técnica de instalações existentes às normas vigentes, garantindo conformidade regulatória e segurança operacional.</p>
+          </div>
+        </div>
+        <div class="servico-card fade-scale d1">
+          <div class="servico-header">
+            <i class="fa-solid fa-microchip"></i>
+            <h3>Automação industrial</h3>
+          </div>
+          <div class="servico-body">
+            <p>Implementação de soluções de automação para otimização de processos industriais, eficiência energética e controle inteligente.</p>
+          </div>
+        </div>
+        <div class="servico-card fade-scale d2">
+          <div class="servico-header">
+            <i class="fa-solid fa-file-lines"></i>
+            <h3>Laudos técnicos</h3>
+          </div>
+          <div class="servico-body">
+            <p>Emissão de laudos técnicos e relatórios de inspeção para instalações elétricas e sistemas de climatização, com embasamento normativo.</p>
+          </div>
+        </div>
+        <div class="servico-card fade-scale d3">
+          <div class="servico-header">
+            <i class="fa-solid fa-drafting-compass"></i>
+            <h3>Projetos técnicos</h3>
+          </div>
+          <div class="servico-body">
+            <p>Desenvolvimento de projetos elétricos e de climatização com dimensionamento correto, memorial descritivo e conformidade técnica.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ MVV ══════ -->
+  <section id="mvv">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="mvv-header fade-up">
+        <span class="section-tag dark">Nossa essência</span>
+        <h2 class="section-title white">O que nos <span>move</span></h2>
+      </div>
+      <div class="mvv-grid">
+        <div class="mvv-card fade-scale d1">
+          <div class="mvv-icon"><i class="fa-solid fa-bullseye"></i></div>
+          <h3>Missão</h3>
+          <p>Oferecer soluções completas e eficientes em instalação e tecnologia, garantindo qualidade, segurança e satisfação ao cliente por meio de serviços especializados e atendimento próximo.</p>
+        </div>
+        <div class="mvv-card fade-scale d2">
+          <div class="mvv-icon"><i class="fa-solid fa-eye"></i></div>
+          <h3>Visão</h3>
+          <p>Ser reconhecida como referência em soluções instaladas e serviços técnicos, destacando-se pela inovação, confiabilidade e excelência na execução no mercado da região metropolitana.</p>
+        </div>
+        <div class="mvv-card fade-scale d3">
+          <div class="mvv-icon"><i class="fa-solid fa-gem"></i></div>
+          <h3>Valores</h3>
+          <div class="mvv-valores-list">
+            <div class="mvv-valor-item"><i class="fa-solid fa-circle"></i> Compromisso com a qualidade</div>
+            <div class="mvv-valor-item"><i class="fa-solid fa-circle"></i> Transparência e ética profissional</div>
+            <div class="mvv-valor-item"><i class="fa-solid fa-circle"></i> Inovação contínua</div>
+            <div class="mvv-valor-item"><i class="fa-solid fa-circle"></i> Responsabilidade e cumprimento de prazos</div>
+            <div class="mvv-valor-item"><i class="fa-solid fa-circle"></i> Foco total no cliente</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ DIFERENCIAIS ══════ -->
+  <section id="diferenciais">
+    <div class="container">
+      <div class="dif-intro fade-up">
+        <span class="section-tag">Por que nos escolher</span>
+        <h2 class="section-title">Nossos <span>diferenciais</span></h2>
+        <p class="section-desc">O que torna a Installed Solutions a parceira certa para sua empresa.</p>
+      </div>
+      <div class="dif-grid">
+        <div class="dif-card fade-scale d1">
+          <div class="dif-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h3>Padrão técnico elevado</h3>
+          <p>Todos os serviços executados conforme normas ABNT e regulamentações vigentes, garantindo segurança e conformidade.</p>
+        </div>
+        <div class="dif-card fade-scale d2">
+          <div class="dif-icon"><i class="fa-solid fa-clock"></i></div>
+          <h3>Plantão 24 horas</h3>
+          <p>Disponibilidade total para chamadas emergenciais. Sua operação não para — nem a nossa.</p>
+        </div>
+        <div class="dif-card fade-scale d3">
+          <div class="dif-icon"><i class="fa-solid fa-building-user"></i></div>
+          <h3>Experiência corporativa</h3>
+          <p>Atendemos empresas de todos os portes, incluindo multinacionais, com soluções adaptadas à complexidade de cada projeto.</p>
+        </div>
+        <div class="dif-card fade-scale d4">
+          <div class="dif-icon"><i class="fa-solid fa-handshake"></i></div>
+          <h3>Atendimento próximo</h3>
+          <p>Relacionamento direto com o cliente, com comunicação clara e acompanhamento desde o projeto até a entrega final.</p>
+        </div>
+        <div class="dif-card fade-scale d5">
+          <div class="dif-icon"><i class="fa-solid fa-leaf"></i></div>
+          <h3>Eficiência energética</h3>
+          <p>Projetos pensados para reduzir consumo e custos operacionais, unindo sustentabilidade a performance.</p>
+        </div>
+        <div class="dif-card fade-scale d6">
+          <div class="dif-icon"><i class="fa-solid fa-file-shield"></i></div>
+          <h3>Documentação completa</h3>
+          <p>Entregamos laudos, relatórios e PMOC com toda a documentação técnica necessária para a regularização do seu negócio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ GALERIA ══════ -->
+  <section id="galeria">
+    <div class="container">
+      <div class="galeria-intro fade-up">
+        <span class="section-tag">Portfólio</span>
+        <h2 class="section-title">Nossos <span>trabalhos</span></h2>
+        <p class="section-desc">Conheça alguns dos projetos realizados pela Installed Solutions em empresas e indústrias da região metropolitana de Porto Alegre.</p>
+      </div>
+      <div class="galeria-grid">
+        <div class="galeria-item fade-scale d1">
+          <img src="images/midia_1.jpg" alt="Instalação de condensadoras Midea" loading="lazy">
+          <div class="galeria-overlay"><span>Instalação de climatização</span></div>
+        </div>
+        <div class="galeria-item fade-scale d2">
+          <img src="images/midia_3.jpg" alt="Iluminação LED industrial instalada em galpão" loading="lazy">
+          <div class="galeria-overlay"><span>Iluminação LED industrial</span></div>
+        </div>
+        <div class="galeria-item fade-scale d3">
+          <img src="images/midia_5.jpg" alt="Sistema de climatização em galpão" loading="lazy">
+          <div class="galeria-overlay"><span>Climatização de galpão</span></div>
+        </div>
+        <div class="galeria-item fade-scale d4">
+          <img src="images/midia_8.jpg" alt="Condensadoras Fujitsu Airstage instaladas" loading="lazy">
+          <div class="galeria-overlay"><span>VRF Fujitsu Airstage</span></div>
+        </div>
+        <div class="galeria-item fade-scale d5">
+          <img src="images/midia_9.jpg" alt="Quadro elétrico industrial 380V" loading="lazy">
+          <div class="galeria-overlay"><span>Quadro elétrico 380V</span></div>
+        </div>
+        <div class="galeria-item fade-scale d1">
+          <img src="images/midia_6.jpg" alt="Ar-condicionado piso-teto em comércio" loading="lazy">
+          <div class="galeria-overlay"><span>Ar-condicionado piso-teto</span></div>
+        </div>
+        <div class="galeria-item fade-scale d2">
+          <img src="images/midia_7.jpg" alt="Unidades VRF Fujitsu pré-instalação" loading="lazy">
+          <div class="galeria-overlay"><span>Sistema VRF — pré-instalação</span></div>
+        </div>
+        <div class="galeria-item fade-scale d3">
+          <img src="images/midia_4.jpg" alt="Manutenção de ar-condicionado" loading="lazy">
+          <div class="galeria-overlay"><span>Manutenção de climatização</span></div>
+        </div>
+        <div class="galeria-item fade-scale d4">
+          <img src="images/midia_2.jpg" alt="Produtos certificados para PMOC" loading="lazy">
+          <div class="galeria-overlay"><span>Produtos certificados PMOC</span></div>
+        </div>
+        <div class="galeria-item fade-scale d5">
+          <img src="images/midia_10.jpg" alt="Adequação de infraestrutura elétrica" loading="lazy">
+          <div class="galeria-overlay"><span>Adequação elétrica</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ ÁREA DE ATUAÇÃO ══════ -->
+  <section id="atuacao">
+    <div class="container">
+      <div class="atuacao-inner">
+        <div class="atuacao-text fade-left">
+          <span class="section-tag">Onde atuamos</span>
+          <h2 class="section-title white">Região metropolitana de <span>Porto Alegre</span></h2>
+          <p>Atendemos empresas, indústrias e espaços corporativos em toda a região metropolitana de Porto Alegre com agilidade e comprometimento. Pronto atendimento e suporte técnico onde você estiver.</p>
+          <div class="atuacao-destaques">
+            <div class="atuacao-item"><i class="fa-solid fa-circle"></i> Porto Alegre</div>
+            <div class="atuacao-item"><i class="fa-solid fa-circle"></i> Canoas</div>
+            <div class="atuacao-item"><i class="fa-solid fa-circle"></i> São Leopoldo</div>
+            <div class="atuacao-item"><i class="fa-solid fa-circle"></i> Novo Hamburgo</div>
+            <div class="atuacao-item"><i class="fa-solid fa-circle"></i> Gravataí</div>
+            <div class="atuacao-item"><i class="fa-solid fa-circle"></i> Cachoeirinha</div>
+            <div class="atuacao-item"><i class="fa-solid fa-circle"></i> Sapucaia do Sul</div>
+            <div class="atuacao-item"><i class="fa-solid fa-circle"></i> E toda a região</div>
+          </div>
+          <div style="margin-top:36px;">
+            <a href="https://wa.me/5551992363816?text=Ol%C3%A1%2C%20preciso%20de%20atendimento%20na%20minha%20localidade!" target="_blank" rel="noopener noreferrer" class="btn btn-laranja">
+              <i class="fa-brands fa-whatsapp"></i> Verificar disponibilidade
+            </a>
+          </div>
+        </div>
+        <div class="atuacao-visual fade-right">
+          <div class="atuacao-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <h3>Grande Porto Alegre</h3>
+            <p>Cobertura completa na região metropolitana com equipes prontas para atender sua empresa com agilidade.</p>
+            <div class="atuacao-badge">
+              <i class="fa-solid fa-circle" style="font-size:0.5rem;"></i>
+              Atendimento disponível
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FAQ ══════ -->
+  <section id="faq">
+    <div class="container">
+      <div class="faq-intro fade-up">
+        <span class="section-tag">Dúvidas frequentes</span>
+        <h2 class="section-title">Perguntas <span>frequentes</span></h2>
+        <p class="section-desc">Tire suas principais dúvidas sobre nossos serviços, área de atendimento e como funciona o processo de contratação.</p>
+      </div>
+      <div class="faq-list">
+
+        <div class="faq-item fade-up d1">
+          <button class="faq-question" aria-expanded="false">
+            O que é PMOC e minha empresa é obrigada a ter?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              O PMOC (Plano de Manutenção, Operação e Controle) é exigido pela Lei Federal nº 13.589/2018 e pela Resolução RE nº 9 da ANVISA para todos os ambientes climatizados de uso coletivo — como escritórios, clínicas, escolas, hotéis, shoppings e indústrias. Sua empresa pode ser multada em fiscalizações sem o documento. A Installed Solutions elabora e executa o PMOC conforme todas as exigências legais.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up d2">
+          <button class="faq-question" aria-expanded="false">
+            Vocês atendem fora do horário comercial e fins de semana?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Sim. Mantemos plantão 24 horas para atendimento de emergências elétricas e de climatização. Para chamados fora do horário comercial (segunda a sexta, das 08h às 17h30), entre em contato pelo WhatsApp e nossa equipe avaliará o caso com prioridade.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up d3">
+          <button class="faq-question" aria-expanded="false">
+            Qual é a área de atendimento de vocês?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Atendemos toda a região metropolitana de Porto Alegre, incluindo Porto Alegre, Canoas, São Leopoldo, Novo Hamburgo, Gravataí, Cachoeirinha, Sapucaia do Sul e municípios adjacentes. Em caso de dúvida sobre sua localidade, entre em contato e verificamos a disponibilidade de atendimento.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up d4">
+          <button class="faq-question" aria-expanded="false">
+            Como funciona a manutenção preventiva de ar-condicionado?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              A manutenção preventiva inclui limpeza dos filtros, serpentina e bandeja de drenagem, verificação da carga de gás, checagem de componentes elétricos e teste de funcionamento. A periodicidade recomendada é a cada 3 a 6 meses, dependendo do ambiente. Realizamos o serviço com produtos certificados e entregamos relatório técnico após cada visita.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up d5">
+          <button class="faq-question" aria-expanded="false">
+            Quais tipos de instalação elétrica vocês realizam?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              Realizamos instalações elétricas completas para ambientes comerciais, industriais e corporativos: quadros de distribuição, cabeamento estruturado, iluminação LED, tomadas e circuitos, sistemas de CFTV, automação, adequações de instalações existentes às normas ABNT e emissão de laudos técnicos. Atendemos desde pequenas empresas até multinacionais.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item fade-up d6">
+          <button class="faq-question" aria-expanded="false">
+            Como solicitar um orçamento?
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer" role="region">
+            <div class="faq-answer-inner">
+              É simples: envie uma mensagem pelo WhatsApp, preencha o formulário de contato nesta página ou escreva para nosso e-mail. Descreva brevemente o serviço necessário e a localidade. Nossa equipe retorna em até 24 horas úteis com uma proposta personalizada, sem compromisso.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ CONTATO ══════ -->
+  <section id="contato">
+    <div class="container">
+      <div class="contato-intro fade-up">
+        <span class="section-tag">Fale conosco</span>
+        <h2 class="section-title">Entre em <span>contato</span></h2>
+        <p class="section-desc">Solicite seu orçamento, tire dúvidas ou conheça mais sobre nossos serviços. Estamos prontos para atender.</p>
+      </div>
+      <div class="contato-grid">
+        <div class="fade-left">
+          <div class="contato-cards">
+            <a href="https://wa.me/5551992363816" target="_blank" rel="noopener noreferrer" class="contato-card">
+              <div class="contato-card-icon icon-wa"><i class="fa-brands fa-whatsapp"></i></div>
+              <div class="contato-card-txt">
+                <strong>WhatsApp</strong>
+                <span>(51) 9 9236-3816</span>
+              </div>
+            </a>
+            <a href="mailto:contato@installedsolutions.net" class="contato-card">
+              <div class="contato-card-icon icon-mail"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contato-card-txt">
+                <strong>E-mail</strong>
+                <a href="mailto:contato@installedsolutions.net">contato@installedsolutions.net</a>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/installedsolutions_/" target="_blank" rel="noopener noreferrer" class="contato-card">
+              <div class="contato-card-icon icon-ig"><i class="fa-brands fa-instagram"></i></div>
+              <div class="contato-card-txt">
+                <strong>Instagram Empresa</strong>
+                <span>@installedsolutions_</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/gustavo_installed/" target="_blank" rel="noopener noreferrer" class="contato-card">
+              <div class="contato-card-icon icon-ig"><i class="fa-brands fa-instagram"></i></div>
+              <div class="contato-card-txt">
+                <strong>Instagram Responsável</strong>
+                <span>@gustavo_installed</span>
+              </div>
+            </a>
+            <a href="https://www.facebook.com/share/18crWLTvgi/" target="_blank" rel="noopener noreferrer" class="contato-card">
+              <div class="contato-card-icon icon-fb"><i class="fa-brands fa-facebook-f"></i></div>
+              <div class="contato-card-txt">
+                <strong>Facebook</strong>
+                <span>Installed Solutions</span>
+              </div>
+            </a>
+          </div>
+          <div class="horario-box">
+            <h3><i class="fa-solid fa-clock" style="margin-right:6px;"></i> Horário de atendimento</h3>
+            <p>
+              <strong>Segunda a sexta</strong><br>
+              08h às 17h30
+            </p>
+            <div class="horario-emergencia">
+              <i class="fa-solid fa-bell" style="font-size:0.6rem;"></i>
+              Plantão 24h para emergências
+            </div>
+          </div>
+        </div>
+
+        <div class="fade-right">
+          <div class="contato-form" id="contatoFormWrap">
+            <div class="contato-form-header">
+              <h3>Solicite um orçamento</h3>
+              <p>Preencha o formulário e entraremos em contato em até 24 horas úteis.</p>
+            </div>
+            <form id="contatoForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="formNome">Nome *</label>
+                  <input class="form-input" type="text" id="formNome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="formTel">WhatsApp *</label>
+                  <input class="form-input" type="tel" id="formTel" placeholder="(51) 9 0000-0000" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formEmail">E-mail</label>
+                <input class="form-input" type="email" id="formEmail" placeholder="seu@email.com">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formServico">Serviço de interesse *</label>
+                <select class="form-select" id="formServico" required>
+                  <option value="" disabled selected>Selecione um serviço…</option>
+                  <option>Instalação elétrica</option>
+                  <option>Manutenção elétrica</option>
+                  <option>Instalação de climatização</option>
+                  <option>Manutenção de climatização</option>
+                  <option>PMOC</option>
+                  <option>Automação industrial</option>
+                  <option>Laudo técnico</option>
+                  <option>Projeto técnico</option>
+                  <option>Outro / Não sei ao certo</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="formMsg">Mensagem</label>
+                <textarea class="form-textarea" id="formMsg" placeholder="Descreva brevemente o que você precisa…"></textarea>
+              </div>
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn-laranja">
+                  <i class="fa-brands fa-whatsapp"></i> Enviar pelo WhatsApp
+                </button>
+                <p class="form-privacy">Ao enviar, você será redirecionado ao WhatsApp com sua mensagem preenchida.</p>
+              </div>
+            </form>
+            <div class="form-success" id="formSuccess">
+              <i class="fa-brands fa-whatsapp"></i>
+              <h4>Redirecionando…</h4>
+              <p>Abrindo o WhatsApp com sua mensagem. Se não abrir automaticamente, <a href="https://wa.me/5551992363816" target="_blank" rel="noopener noreferrer" style="color:var(--laranja);">clique aqui</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════ FOOTER ══════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <img src="images/logo.png" alt="Installed Solutions">
+        </div>
+        <div class="footer-info">
+          <strong>Installed Solutions</strong><br>
+          CNPJ 42.577.903/0001-80<br>
+          Região Metropolitana de Porto Alegre — RS<br>
+          (51) 9 9236-3816 · contato@installedsolutions.net
+        </div>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/installedsolutions_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram empresa">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.instagram.com/gustavo_installed/" target="_blank" rel="noopener noreferrer" aria-label="Instagram responsável">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/share/18crWLTvgi/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/5551992363816" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+      <p class="footer-copy">© 2025 Installed Solutions. Todos os direitos reservados. · Elevando qualidade a outro nível.</p>
+    </div>
+  </footer>
+
+  <!-- Rodapé MonteSite - Atualização Automática -->
+  <div id="montesite-footer-badge"></div>
+  <script src="https://vaabpicspdbolvutnscp.supabase.co/functions/v1/get-footer-iframe"></script>
+
+  <!-- ══════ FLUTUANTES ══════ -->
+  <div class="wa-float" aria-label="Contato via WhatsApp">
+    <a href="https://wa.me/5551992363816?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento!" target="_blank" rel="noopener noreferrer" aria-label="Abrir WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Voltar ao topo">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <script>
+    /* ── HEADER SCROLL ── */
+    const header = document.getElementById('header');
+    const prog   = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const s = window.scrollY;
+      header.classList.toggle('scrolled', s > 20);
+      document.getElementById('scrollTop').classList.toggle('show', s > 300);
+      prog.style.width = (s / (document.body.scrollHeight - window.innerHeight) * 100) + '%';
+    }, { passive: true });
+
+    document.getElementById('scrollTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    /* ── HAMBURGER ── */
+    const hamburger = document.getElementById('hamburger');
+    const navMenu   = document.getElementById('navMenu');
+    hamburger.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('open');
+      hamburger.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+    });
+    navMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', false);
+      });
+    });
+
+    /* ── FADE-IN SCROLL ── */
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-up, .fade-left, .fade-right, .fade-scale').forEach(el => obs.observe(el));
+
+    /* ── COUNTER ── */
+    function animateCount(el) {
+      const target = +el.dataset.target, suffix = el.dataset.suffix || '', dur = 1600, start = performance.now();
+      function step(now) {
+        const p = Math.min((now - start) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(ease * target) + suffix;
+        if (p < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    const statsObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.querySelectorAll('.counter').forEach(animateCount); statsObs.unobserve(e.target); } });
+    }, { threshold: 0.4 });
+    const hs = document.getElementById('heroStats');
+    if (hs) statsObs.observe(hs);
+
+    /* ── RIPPLE ── */
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        const r = document.createElement('span');
+        r.classList.add('ripple');
+        const rect = this.getBoundingClientRect(), size = Math.max(rect.width, rect.height);
+        r.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX-rect.left-size/2}px;top:${e.clientY-rect.top-size/2}px`;
+        this.appendChild(r);
+        r.addEventListener('animationend', () => r.remove());
+      });
+    });
+
+    /* ── TILT 3D ── */
+    document.querySelectorAll('.servico-card, .dif-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const dx = (e.clientX - rect.left - rect.width/2)  / (rect.width/2);
+        const dy = (e.clientY - rect.top  - rect.height/2) / (rect.height/2);
+        card.style.transform = `perspective(600px) rotateY(${dx*4}deg) rotateX(${-dy*4}deg) scale(1.02) translateY(-4px)`;
+      }, { passive: true });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.transition = 'transform 0.5s ease';
+        setTimeout(() => card.style.transition = '', 500);
+      });
+    });
+
+    /* ── PARTÍCULAS HERO ── */
+    (function() {
+      const c = document.getElementById('heroParticles');
+      if (!c) return;
+      for (let i = 0; i < 22; i++) {
+        const p = document.createElement('span');
+        p.className = 'hero-particle';
+        const sz = Math.random() * 5 + 2;
+        p.style.cssText = `width:${sz}px;height:${sz}px;left:${Math.random()*100}%;bottom:${Math.random()*60}%;--dur:${(Math.random()*5+4).toFixed(1)}s;--delay:${(Math.random()*6).toFixed(1)}s;`;
+        c.appendChild(p);
+      }
+    })();
+
+    /* ── COUNTER BADGE SOBRE ── */
+    (function() {
+      const badge = document.querySelector('.sobre-badge strong');
+      if (!badge) return;
+      const badgeObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (!e.isIntersecting) return;
+          const target = 2020, from = 2015, dur = 1400, start = performance.now();
+          function step(now) {
+            const p = Math.min((now - start) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
+            badge.textContent = Math.round(from + ease * (target - from));
+            if (p < 1) requestAnimationFrame(step);
+            else badge.textContent = String(target);
+          }
+          requestAnimationFrame(step);
+          badgeObs.unobserve(e.target);
+        });
+      }, { threshold: 0.5 });
+      badgeObs.observe(badge);
+    })();
+
+    /* ── TYPEWRITER SLOGAN ── */
+    (function() {
+      const el = document.getElementById('heroSlogan');
+      if (!el) return;
+      const text = 'Elevando qualidade a outro nível.';
+      let i = 0;
+      function type() {
+        if (i < text.length) {
+          el.textContent = text.slice(0, ++i);
+          setTimeout(type, 52);
+        } else {
+          el.classList.remove('typewriter-cursor');
+          setTimeout(() => el.classList.add('typewriter-cursor'), 500);
+        }
+      }
+      setTimeout(type, 1100);
+    })();
+
+    /* ── BOTÕES MAGNÉTICOS ── */
+    document.querySelectorAll('.btn-laranja, .btn-marrom, .btn-outline-white, .btn-outline-marrom').forEach(btn => {
+      btn.addEventListener('mousemove', (e) => {
+        const r = btn.getBoundingClientRect();
+        const dx = (e.clientX - r.left - r.width/2)  * 0.18;
+        const dy = (e.clientY - r.top  - r.height/2) * 0.18;
+        btn.style.transform = `translate(${dx}px, ${dy}px) translateY(-2px)`;
+      }, { passive: true });
+      btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+    });
+
+    /* ── SECTION TAG LINE GROW ── */
+    const tagObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible-line'); tagObs.unobserve(e.target); } });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.section-tag').forEach(t => tagObs.observe(t));
+
+    /* ── FAQ ACCORDION ── */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('active');
+        document.querySelectorAll('.faq-item.active').forEach(el => {
+          el.classList.remove('active');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* ── FORMULÁRIO → WHATSAPP ── */
+    (function() {
+      const form = document.getElementById('contatoForm');
+      const success = document.getElementById('formSuccess');
+      if (!form) return;
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nome    = document.getElementById('formNome').value.trim();
+        const tel     = document.getElementById('formTel').value.trim();
+        const email   = document.getElementById('formEmail').value.trim();
+        const servico = document.getElementById('formServico').value;
+        const msg     = document.getElementById('formMsg').value.trim();
+        if (!nome || !tel || !servico) {
+          const missing = form.querySelector('[required]:invalid') || form.querySelector('[required]');
+          if (missing) { missing.focus(); missing.style.borderColor = '#e63030'; setTimeout(() => missing.style.borderColor = '', 2000); }
+          return;
+        }
+        let texto = `Olá! Vim pelo site e gostaria de solicitar um orçamento.\n\n`;
+        texto += `*Nome:* ${nome}\n`;
+        texto += `*Telefone:* ${tel}\n`;
+        if (email) texto += `*E-mail:* ${email}\n`;
+        texto += `*Serviço:* ${servico}\n`;
+        if (msg) texto += `*Mensagem:* ${msg}`;
+        form.style.display = 'none';
+        success.style.display = 'block';
+        window.open(`https://wa.me/5551992363816?text=${encodeURIComponent(texto)}`, '_blank');
+      });
+    })();
+
+    /* ── NAV SCROLL SPY ── */
+    const navAs = document.querySelectorAll('.nav-links a:not(.nav-cta)');
+    const spyObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navAs.forEach(a => { a.style.color = ''; a.style.fontWeight = ''; });
+          const active = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+          if (active) { active.style.color = '#F7941D'; active.style.fontWeight = '700'; }
+        }
+      });
+    }, { threshold: 0.3 });
+    document.querySelectorAll('section[id]').forEach(s => spyObs.observe(s));
+  </script>
+</body>
+</html>
