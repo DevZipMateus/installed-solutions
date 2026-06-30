@@ -782,6 +782,76 @@
     /* ══════════════════════════════════
        MVV
     ══════════════════════════════════ */
+    /* ── FUNDADOR ── */
+    #fundador { padding: 100px 0; background: var(--cinza-50); }
+    .fundador-grid {
+      display: grid; grid-template-columns: 380px 1fr;
+      gap: 72px; align-items: start;
+    }
+    .fundador-foto-wrap {
+      position: sticky; top: calc(var(--header-h) + 24px);
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .fundador-foto-principal {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top;
+      border-radius: 16px; display: block;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+    }
+    .fundador-foto-row {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: stretch;
+    }
+    .fundador-foto-sec {
+      width: 100%; height: 100%; aspect-ratio: 1/1; object-fit: cover; object-position: top;
+      border-radius: 12px; display: block;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+    }
+    .fundador-foto-credencial {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+      background: white; border-radius: 12px; padding: 14px 12px;
+      border: 1px solid var(--cinza-100); box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      text-align: center;
+    }
+    .fundador-avatar {
+      width: 64px; height: 64px; border-radius: 50%; object-fit: cover; display: block;
+      border: 3px solid var(--laranja);
+    }
+    .fundador-foto-credencial span { font-size: 0.75rem; color: var(--cinza-400); font-family: var(--ff-corpo); line-height: 1.4; }
+    .fundador-texto { }
+    .fundador-nome {
+      font-family: var(--ff-titulo); font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700; color: var(--preto); line-height: 1.1; margin-bottom: 6px;
+      text-transform: uppercase; letter-spacing: 0.02em;
+    }
+    .fundador-cargo {
+      font-family: var(--ff-barlow); font-size: 1rem; font-weight: 500;
+      color: var(--laranja); letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+    .fundador-bio p {
+      font-family: var(--ff-corpo); font-size: 0.97rem; color: var(--cinza-400);
+      line-height: 1.85; margin-bottom: 18px;
+    }
+    .fundador-bio p:last-child { margin-bottom: 0; }
+    .fundador-parceiros {
+      margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--cinza-100);
+    }
+    .fundador-parceiros-label {
+      font-family: var(--ff-titulo); font-size: 0.7rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--cinza-300); margin-bottom: 16px; display: block;
+    }
+    .fundador-parceiros-tags { display: flex; flex-wrap: wrap; gap: 10px; }
+    .fundador-parceiro-tag {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: white; border: 1px solid var(--cinza-100);
+      border-radius: 100px; padding: 7px 16px;
+      font-family: var(--ff-corpo); font-size: 0.82rem; font-weight: 600;
+      color: var(--preto); transition: border-color var(--tr), box-shadow var(--tr);
+    }
+    .fundador-parceiro-tag i { color: var(--laranja); font-size: 0.75rem; }
+    .fundador-parceiro-tag:hover { border-color: var(--laranja); box-shadow: 0 2px 10px rgba(247,148,29,0.12); }
+    @media(max-width:1024px) { .fundador-grid { grid-template-columns: 280px 1fr; gap: 48px; } }
+    @media(max-width:768px)  { .fundador-grid { grid-template-columns: 1fr; gap: 36px; } .fundador-foto-wrap { position: static; } }
+
     #mvv {
       background: var(--marrom-esc);
       background-image:
@@ -1964,6 +2034,7 @@
         <a href="#sobre">Sobre</a>
         <a href="#servicos">Serviços</a>
         <a href="#galeria">Trabalhos</a>
+        <a href="#fundador">Fundador</a>
         <a href="#faq">FAQ</a>
         <a href="#contato">Contato</a>
         <a href="https://wa.me/5551992363816" target="_blank" rel="noopener noreferrer" class="nav-cta">
@@ -1980,6 +2051,7 @@
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
     <a href="#galeria">Trabalhos</a>
+    <a href="#fundador">Fundador</a>
     <a href="#faq">FAQ</a>
     <a href="#contato">Contato</a>
     <a href="https://wa.me/5551992363816" target="_blank" rel="noopener noreferrer" class="nav-cta">
@@ -1994,7 +2066,7 @@
         <div class="hero-text">
           <div class="hero-tag">
             <i class="fa-solid fa-bolt"></i>
-            Instalações &amp; Manutenções Técnicas
+            Eletricidade, climatização e confiabilidade para sua empresa
           </div>
           <h1><span class="shimmer-laranja">Installed</span><br>Solutions</h1>
           <p class="hero-sub">Manutenção &amp; Serviços</p>
@@ -2202,6 +2274,51 @@
     </div>
   </section>
 
+  <!-- ══════ FUNDADOR ══════ -->
+  <section id="fundador">
+    <div class="container">
+      <div class="fundador-grid fade-up">
+
+        <!-- Foto -->
+        <div class="fundador-foto-wrap">
+          <img src="images/img_9696.png" alt="Gustavo da Rosa Dorneles — Fundador da Installed Solutions" class="fundador-foto-principal">
+          <div class="fundador-foto-row">
+            <img src="images/img_9698.png" alt="Gustavo Dorneles com ferramentas Milwaukee" class="fundador-foto-sec">
+            <div class="fundador-foto-credencial">
+              <img src="images/img_9690.png" alt="Gustavo Dorneles" class="fundador-avatar">
+              <span>Técnico em Refrigeração e Climatização — CFT/RS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Texto -->
+        <div class="fundador-texto">
+          <span class="section-tag">Quem está por trás</span>
+          <h2 class="fundador-nome">Gustavo da Rosa Dorneles</h2>
+          <p class="fundador-cargo">Fundador &amp; Responsável Técnico — Installed Solutions</p>
+          <div class="fundador-bio">
+            <p>Empresário, técnico em Refrigeração e Climatização registrado no CFT/RS e fundador da Installed Solutions, Gustavo da Rosa Dorneles construiu sua trajetória profissional unindo conhecimento técnico, inovação e foco em resultados para o mercado corporativo e industrial.</p>
+            <p>Com formação em eletrônica e automação industrial, atua há anos no desenvolvimento de soluções em eletricidade, climatização, manutenção industrial, infraestrutura elétrica e eficiência operacional, atendendo empresas que demandam alta confiabilidade, segurança e continuidade de suas operações.</p>
+            <p>À frente da Installed Solutions, Gustavo tem como propósito elevar o padrão dos serviços técnicos prestados ao mercado B2B, investindo continuamente na capacitação profissional, em processos de excelência e na aquisição de equipamentos de última geração. Essa busca constante por tecnologia permite oferecer diagnósticos mais precisos, maior produtividade, redução de falhas e soluções alinhadas às exigências da indústria moderna.</p>
+            <p>Seu trabalho é respaldado por importantes parcerias estratégicas com marcas de referência mundial, como a Milwaukee Tool, líder global em ferramentas profissionais de alta performance; a Elitech, reconhecida internacionalmente por suas tecnologias para refrigeração, climatização e monitoramento; a WBertolo, referência em segurança para trabalho em altura; e a Gatti Química, destacada pelo desenvolvimento de produtos para manutenção e higienização técnica.</p>
+            <p>Reconhecido pela sua atuação prática, forte presença no setor e compromisso com a qualidade, Gustavo consolidou a Installed Solutions como uma empresa focada em entregar soluções técnicas de alto desempenho para indústrias, centros logísticos, comércios e organizações que não podem parar.</p>
+            <p>Sua missão é simples: elevar a qualidade a outro nível, transformando conhecimento técnico e tecnologia em resultados concretos para seus clientes.</p>
+          </div>
+          <div class="fundador-parceiros">
+            <span class="fundador-parceiros-label">Parcerias estratégicas</span>
+            <div class="fundador-parceiros-tags">
+              <span class="fundador-parceiro-tag"><i class="fa-solid fa-circle-check"></i> Milwaukee Tool</span>
+              <span class="fundador-parceiro-tag"><i class="fa-solid fa-circle-check"></i> Elitech</span>
+              <span class="fundador-parceiro-tag"><i class="fa-solid fa-circle-check"></i> WBertolo</span>
+              <span class="fundador-parceiro-tag"><i class="fa-solid fa-circle-check"></i> Gatti Química</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ══════ MVV ══════ -->
   <section id="mvv">
     <div class="container" style="position:relative;z-index:1;">
@@ -2300,8 +2417,8 @@
           <div class="galeria-overlay"><span>Climatização de galpão</span></div>
         </div>
         <div class="galeria-item fade-scale d4">
-          <img src="images/midia_8.jpg" alt="Condensadoras Fujitsu Airstage instaladas" loading="lazy">
-          <div class="galeria-overlay"><span>VRF Fujitsu Airstage</span></div>
+          <img src="images/midia_8.jpg" alt="Fujitsu Inverter 1x1 Piso Teto 54.000 BTU instalado" loading="lazy">
+          <div class="galeria-overlay"><span>Sistema Inverter 1x1 Piso Teto 54.000 BTU</span></div>
         </div>
         <div class="galeria-item fade-scale d5">
           <img src="images/midia_9.jpg" alt="Quadro elétrico industrial 380V" loading="lazy">
@@ -2312,8 +2429,8 @@
           <div class="galeria-overlay"><span>Ar-condicionado piso-teto</span></div>
         </div>
         <div class="galeria-item fade-scale d2">
-          <img src="images/midia_7.jpg" alt="Unidades VRF Fujitsu pré-instalação" loading="lazy">
-          <div class="galeria-overlay"><span>Sistema VRF — pré-instalação</span></div>
+          <img src="images/midia_7.jpg" alt="Fujitsu Inverter 1x1 Piso Teto 54.000 BTU — pré-instalação" loading="lazy">
+          <div class="galeria-overlay"><span>Sistema Inverter 1x1 Piso Teto — pré-instalação</span></div>
         </div>
         <div class="galeria-item fade-scale d3">
           <img src="images/midia_4.jpg" alt="Manutenção de ar-condicionado" loading="lazy">
@@ -2478,7 +2595,7 @@
               <div class="contato-card-icon icon-mail"><i class="fa-solid fa-envelope"></i></div>
               <div class="contato-card-txt">
                 <strong>E-mail</strong>
-                <a href="mailto:contato@installedsolutions.net">contato@installedsolutions.net</a>
+                <span>contato@installedsolutions.net</span>
               </div>
             </a>
             <a href="https://www.instagram.com/installedsolutions_/" target="_blank" rel="noopener noreferrer" class="contato-card">
